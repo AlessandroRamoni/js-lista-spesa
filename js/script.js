@@ -34,7 +34,13 @@ let i = 0;
 
 while (i < listItems.length) {
   // console.log(listItems[i]);
-  elenco.innerHTML += `<li class="list-group-item">${listItems[i]}</li>`;
+  // elenco.innerHTML += `<li class="list-group-item">${listItems[i]}</li>`;
+
+  if (i % 2 === 0) {
+    elenco.innerHTML += `<li class="list-group-item backgreen">${listItems[i]}</li>`;
+  } else {
+    elenco.innerHTML += `<li class="list-group-item backred">${listItems[i]}</li>`;
+  }
 
   i++;
 }
