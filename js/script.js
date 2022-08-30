@@ -27,11 +27,14 @@ for (let i = 0; i < listItems.length; i++) {
 */
 
 const elenco = document.querySelector(".list-group");
+const lista = document.getElementById("lista");
 
+lista.style.color = "green";
 let i = 0;
 
 while (i < listItems.length) {
-  console.log(listItems[i]);
+  // console.log(listItems[i]);
   elenco.innerHTML += `<li class="list-group-item">${listItems[i]}</li>`;
+
   i++;
 }
