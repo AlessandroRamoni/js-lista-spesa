@@ -32,5 +32,6 @@ let i = 0;
 
 while (i < listItems.length) {
   console.log(listItems[i]);
+  elenco.innerHTML += `<li class="list-group-item">${listItems[i]}</li>`;
   i++;
 }
