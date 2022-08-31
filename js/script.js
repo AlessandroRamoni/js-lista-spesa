@@ -30,6 +30,8 @@ const elenco = document.querySelector(".list-group");
 const lista = document.getElementById("lista");
 lista.style.color = "green";
 const addButton = document.getElementById("add");
+
+////////////////AGGIUNGERE UN ELEMENTO (BUTTON)
 const pulsante = document.createElement("button");
 pulsante.append("Aggiungi");
 addButton.append(pulsante);
@@ -48,11 +50,11 @@ while (i < listItems.length) {
     elenco.innerHTML += `<li class="list-group-item backred">${listItems[i]}</li>`;
   }
 
-  i++;
+  i++; //condizione di uscita
 }
 
 const moreItems = ["quaderni", "matite", "paperelle", "post-it"];
-for (e = 0; e < moreItems.length; e++) {
+for (let e = 0; e < moreItems.length; e++) {
   // articolo = moreItems[e];
   pulsante.addEventListener("click", function () {
     if (e % 2 === 0) {
