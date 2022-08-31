@@ -11,3 +11,8 @@ box-sizing: border-box;
 .backgreen{
     color: green;
 }
+
+.center{
+    position: relative;
+    left: 50%;
+}

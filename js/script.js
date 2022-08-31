@@ -28,14 +28,14 @@ for (let i = 0; i < listItems.length; i++) {
 
 const elenco = document.querySelector(".list-group");
 const lista = document.getElementById("lista");
-
+lista.style.color = "green";
 const addButton = document.getElementById("add");
 const pulsante = document.createElement("button");
 pulsante.append("Aggiungi");
 addButton.append(pulsante);
+pulsante.classList.add("backred", "center");
 
-lista.style.color = "green";
-
+/////////////////CICLO WHILE
 let i = 0;
 
 while (i < listItems.length) {
@@ -50,3 +50,18 @@ while (i < listItems.length) {
 
   i++;
 }
+
+const moreItems = ["quaderni", "matite", "paperelle", "post-it"];
+for (e = 0; e < moreItems.length; e++) {
+  // articolo = moreItems[e];
+  pulsante.addEventListener("click", function () {
+    if (e % 2 === 0) {
+      elenco.innerHTML += `<li class="list-group-item backgreen">${moreItems[e]}</li>`;
+    } else {
+      elenco.innerHTML += `<li class="list-group-item backred">${moreItems[e]}</li>`;
+    }
+  });
+  // console.log(articolo);
+}
+
+// elenco.innerHTML += `<li class="list-group-item">${moreItems[e]}</li>`;
