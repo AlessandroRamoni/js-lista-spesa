@@ -53,17 +53,21 @@ while (i < listItems.length) {
   i++; //condizione di uscita
 }
 
+let e = 0;
 const moreItems = ["quaderni", "matite", "paperelle", "post-it"];
-for (let e = 0; e < moreItems.length; e++) {
-  // articolo = moreItems[e];
-  pulsante.addEventListener("click", function () {
-    if (e % 2 === 0) {
+// articolo = moreItems[e];
+pulsante.addEventListener("click", function () {
+  if (e < moreItems.length) {
+    if (i % 2 === 0) {
       elenco.innerHTML += `<li class="list-group-item backgreen">${moreItems[e]}</li>`;
     } else {
       elenco.innerHTML += `<li class="list-group-item backred">${moreItems[e]}</li>`;
     }
-  });
+    // elenco.innerHTML += `<li class="list-group-item backgreen">${moreItems[e]}</li>`;
+    e++;
+  }
+
   // console.log(articolo);
-}
+});
 
 // elenco.innerHTML += `<li class="list-group-item">${moreItems[e]}</li>`;
