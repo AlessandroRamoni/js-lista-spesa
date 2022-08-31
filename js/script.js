@@ -29,7 +29,13 @@ for (let i = 0; i < listItems.length; i++) {
 const elenco = document.querySelector(".list-group");
 const lista = document.getElementById("lista");
 
+const addButton = document.getElementById("add");
+const pulsante = document.createElement("button");
+pulsante.append("Aggiungi");
+addButton.append(pulsante);
+
 lista.style.color = "green";
+
 let i = 0;
 
 while (i < listItems.length) {
