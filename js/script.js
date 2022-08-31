@@ -58,7 +58,7 @@ const moreItems = ["quaderni", "matite", "paperelle", "post-it"];
 // articolo = moreItems[e];
 pulsante.addEventListener("click", function () {
   if (e < moreItems.length) {
-    if (i % 2 === 0) {
+    if (e % 2 === 0) {
       elenco.innerHTML += `<li class="list-group-item backgreen">${moreItems[e]}</li>`;
     } else {
       elenco.innerHTML += `<li class="list-group-item backred">${moreItems[e]}</li>`;
